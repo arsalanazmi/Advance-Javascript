@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Condition Ternary Operator</title>
+</head>
+<body>
+    <script>
+        let gender = prompt("Enter Your gender");
+
+        if (gender === "Male"){
+            console.log("Color is Blue");
+        }
+        else{
+            console.log("Color is Pink");
+        }
+
+
+// Above if condition can be written in one line as following
+        gender === "Male" ? console.log("Color is Blue") : console.log("Color is Pink");
+
+
+// Above ternary operator can be written as follows        
+        gender === "Male"
+           ? console.log("Color is Blue")
+           : console.log("Color is Pink")
+
+
+// Above ternary operator can be written as follows
+        gender === "Male"
+           ? console.log("Color is Blue")
+           : gender === "Female"
+               ? console.log("Color is Pink")
+               : console.log("Color is Purple");
+                       
+    </script>
+</body>
+</html>

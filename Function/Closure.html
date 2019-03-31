@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Closure</title>
+</head>
+<body>
+    <script>
+        var i = "Global Variable";
+        console.log(i); //RESULT: Error Not Accessible
+
+        function show4() {
+            var j = "Local Variable of Outer Function";
+            console.log(j); //RESULT: Local Variable of Outer Function
+            
+            function show5() {
+                var k = "Local Variable Of Inner Function";
+                console.log(j); //RESULT: Local Variable of Outer Function
+                console.log(k); //RESULT: Local Variable Of Inner Function
+                console.log(i); //RESULT: Global Variable
+            }
+            show5();
+            console.log(j); //RESULT: Local Variable of Outer Function
+            // console.log(k); //RESULT: Error Not Accessible
+            }
+            show4();
+        </script>
+</body>
+</html>
